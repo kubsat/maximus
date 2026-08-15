@@ -1,0 +1,2 @@
+import { Suspense } from "react"; import { DemoForm } from "./DemoForm";
+export default function DemoRequest() { return <section className="formPage"><div><span className="pill">LET&apos;S TALK</span><h1>Build your<br/><em>AI workforce.</em></h1><p>Tell us what you&apos;re working toward. We&apos;ll show you how the right AI worker can help.</p><ul><li>✓ A tailored 30-minute walkthrough</li><li>✓ Your workflows, mapped to Maximus</li><li>✓ Clear next steps—no hard sell</li></ul></div><Suspense><DemoForm /></Suspense></section>; }
