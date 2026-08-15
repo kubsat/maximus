@@ -1,2 +1,43 @@
-import Link from "next/link"; import { WorkerCard } from "@/components/WorkerCard"; import { workers } from "@/lib/workers";
-export default function Home() { return <><section className="hero"><div><span className="pill">THE AI WORKFORCE IS HERE</span><h1>Exceptional work.<br/><em>On demand.</em></h1><p>Deploy specialized AI workers that join your team, learn your business, and turn ambitious goals into measurable outcomes.</p><div className="actions"><Link className="button" href="/marketplace">Explore AI workers</Link><Link className="secondary" href="/demo-request">Book a demo →</Link></div></div><div className="heroVisual"><div className="orbit one"/><div className="orbit two"/><div className="core">M</div><div className="floatCard fc1">Always learning <b>↗</b></div><div className="floatCard fc2">8 specialists <b>●</b></div></div></section><section className="stats"><div><b>24/7</b><span>Always available</span></div><div><b>10×</b><span>Faster execution</span></div><div><b>100%</b><span>Built around you</span></div></section><section className="section"><div className="sectionHead"><div><span className="eyebrow">MEET YOUR NEW TEAM</span><h2>Expertise for every<br/>ambition.</h2></div><Link className="textLink" href="/marketplace">View all workers →</Link></div><div className="cardGrid">{workers.slice(0,4).map(w => <WorkerCard key={w.slug} worker={w}/>)}</div></section><section className="cta"><span className="eyebrow">READY WHEN YOU ARE</span><h2>Your next great hire<br/>isn&apos;t human.</h2><p>See how a Maximus AI worker can transform your team.</p><Link className="button lightButton" href="/demo-request">Book your demo</Link></section></>; }
+import Link from "next/link";
+import { WorkerCard } from "@/components/WorkerCard";
+import { workers } from "@/lib/workers";
+
+export default function Home() {
+  return (
+    <>
+      <section className="hero">
+        <div>
+          <span className="pill">THE AI WORKFORCE IS HERE</span>
+          <h1>Exceptional work.<br /><em>On demand.</em></h1>
+          <p>Deploy specialized AI workers that join your team, learn your business, and turn ambitious goals into measurable outcomes.</p>
+          <div className="actions">
+            <Link className="button" href="/marketplace">Explore AI workers</Link>
+            <Link className="secondary" href="/demo-request">Book a demo →</Link>
+          </div>
+        </div>
+        <div className="heroVisual" aria-hidden="true">
+          <div className="orbit one" /><div className="orbit two" /><div className="core">M</div>
+          <div className="floatCard fc1">Always learning <b>↗</b></div>
+          <div className="floatCard fc2">8 specialists <b>●</b></div>
+        </div>
+      </section>
+      <section className="stats" aria-label="Maximus advantages">
+        <div><b>24/7</b><span>Always available</span></div>
+        <div><b>10×</b><span>Faster execution</span></div>
+        <div><b>100%</b><span>Built around you</span></div>
+      </section>
+      <section className="section">
+        <div className="sectionHead">
+          <div><span className="eyebrow">MEET YOUR NEW TEAM</span><h2>Expertise for every<br />ambition.</h2></div>
+          <Link className="textLink" href="/marketplace">View all workers →</Link>
+        </div>
+        <div className="cardGrid">{workers.slice(0, 4).map((worker) => <WorkerCard key={worker.slug} worker={worker} />)}</div>
+      </section>
+      <section className="cta">
+        <span className="eyebrow">READY WHEN YOU ARE</span><h2>Your next great hire<br />isn&apos;t human.</h2>
+        <p>See how a Maximus AI worker can transform your team.</p>
+        <Link className="button lightButton" href="/demo-request">Book your demo</Link>
+      </section>
+    </>
+  );
+}

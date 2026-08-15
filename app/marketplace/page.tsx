@@ -1,2 +1,15 @@
-import { WorkerCard } from "@/components/WorkerCard"; import { workers } from "@/lib/workers";
-export default function Marketplace() { return <><section className="pageHero"><span className="pill">THE MAXIMUS MARKETPLACE</span><h1>Meet the workers<br/><em>built to deliver.</em></h1><p>Eight specialists. Endless capacity. Choose the expertise your team needs today.</p></section><section className="section marketplace"><div className="marketIntro"><span>{workers.length} AI WORKERS</span><p>Every worker adapts to your tools, context, and standards.</p></div><div className="cardGrid">{workers.map(w => <WorkerCard key={w.slug} worker={w}/>)}</div></section></>; }
+import { MarketplaceCatalog } from "./MarketplaceCatalog";
+import { workers } from "@/lib/workers";
+
+export default function Marketplace() {
+  return (
+    <>
+      <section className="pageHero">
+        <span className="pill">THE MAXIMUS MARKETPLACE</span>
+        <h1>Meet the workers<br /><em>built to deliver.</em></h1>
+        <p>Eight specialists. Endless capacity. Choose the expertise your team needs today.</p>
+      </section>
+      <MarketplaceCatalog workers={workers} />
+    </>
+  );
+}

@@ -1,0 +1,2 @@
+.requiredNote{color:var(--muted);font-size:12px;margin-top:-8px}.requiredNote span,.formCard label>span{color:#9c2f38}.formCard input:user-invalid,.formCard select:user-invalid,.formCard textarea:user-invalid{border-color:#a9363f}.formCard input:focus-visible,.formCard select:focus-visible,.formCard textarea:focus-visible{outline:3px solid #7657e84d;outline-offset:1px;border-color:var(--purple)}
+@media(max-width:620px){.formPage{gap:25px}.formPage h1{font-size:45px}.formPage ul{line-height:1.7}.formCard .button{min-height:48px}}

@@ -1,0 +1,10 @@
+.marketFilters{display:grid;grid-template-columns:minmax(240px,1fr) minmax(180px,280px);gap:18px;align-items:end;margin-bottom:30px;padding:24px;background:#fff;border:1px solid var(--line)}
+.marketFilters label{display:flex;flex-direction:column;gap:8px;font-size:12px;font-weight:700}
+.marketFilters input,.marketFilters select{width:100%;padding:13px;border:1px solid #aeb4b8;border-radius:3px;background:#fff;color:var(--ink)}
+.marketIntro strong{color:var(--ink);text-transform:uppercase;letter-spacing:1.5px}
+.emptyState{text-align:center;padding:75px 20px;background:#fff;border:1px solid var(--line)}
+.emptyState h2{font-size:28px;margin:0 0 10px}.emptyState p{color:var(--muted)}.emptyState button{color:var(--purple);margin-top:12px;border:0;background:transparent;cursor:pointer}
+.workerCard{min-height:480px}.cardOutcome{padding:16px 0;margin:4px 0 18px;border-top:1px solid var(--line)}.cardOutcome span{display:block;color:var(--muted);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:6px}.cardOutcome strong{font-size:13px;line-height:1.45;font-weight:600}
+.detailContent{display:grid;gap:18px}.detailPanel,.buyerPanel{background:#fff;padding:36px}.detailPanel h2,.buyerPanel h2{font:600 25px Manrope;margin:12px 0}.detailPanel ul{padding-left:20px;margin-bottom:0}.detailPanel li{padding:8px 0;line-height:1.5}.buyerPanel{background:var(--ink);color:#fff}.buyerPanel p{color:#cbd1dc;line-height:1.6}.detailValue{border-left:3px solid var(--purple);padding:2px 0 2px 18px;margin:0 0 30px;max-width:560px}.detailValue p{font-size:17px;line-height:1.55;margin:8px 0}
+@media(max-width:950px){.marketplace .cardGrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.marketFilters{grid-template-columns:1fr;padding:18px}.marketplace .cardGrid{grid-template-columns:1fr}.workerCard{min-height:0}.detailPanel,.buyerPanel{padding:24px}}
